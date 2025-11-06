@@ -20,7 +20,7 @@
     },
     "android": {
       "package": "com.yourname.speechbuddy",
-      "permissions": ["CAMERA"],
+      "permissions": ["android.permission.CAMERA"],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#7C3AED"

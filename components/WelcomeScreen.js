@@ -37,13 +37,14 @@ export default function WelcomeScreen({ navigation }) {
                 onChangeText={setChildName}
                 autoCapitalize="words"
                 autoCorrect={false}
+                autoComplete="off"
               />
             </View>
 
             <TouchableOpacity
               style={[styles.button, !childName.trim() && styles.buttonDisabled]}
               onPress={handleContinue}
-              disabled={!childName.trim()}
+              disabled={childName.trim().length === 0}
             >
               <Text style={styles.buttonText}>Let's Start! →</Text>
             </TouchableOpacity>
