@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Speech Buddy",
+    "slug": "speech-buddy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#7C3AED"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.speechbuddy",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs camera access to show you your mouth movements while practicing speech sounds."
+      }
+    },
+    "android": {
+      "package": "com.yourname.speechbuddy",
+      "permissions": ["CAMERA"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#7C3AED"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Speech Buddy to access your camera to show your mouth movements while practicing."
+        }
+      ]
+    ]
+  }
+}
