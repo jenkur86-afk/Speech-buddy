@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image, Modal, Animated } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image, Modal, Animated, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CameraView, useCameraPermissions } from 'expo-camera';
@@ -17,7 +17,7 @@ export default function PracticeScreen({ route, navigation }) {
     if (!permission?.granted) {
       const result = await requestPermission();
       if (!result.granted) {
-        alert('Camera permission is required to use the mirror feature.');
+        Alert.alert('Camera Permission', 'Camera permission is required to use the mirror feature.');
         return;
       }
     }
@@ -179,7 +179,7 @@ export default function PracticeScreen({ route, navigation }) {
       {/* Celebration Modal */}
       <Modal
         visible={showCelebration}
-        transparent
+        transparent={true}
         animationType="fade"
       >
         <View style={styles.modalOverlay}>
